@@ -39,3 +39,29 @@ Goal: provide a middleware component that connects a privately hosted Mattermost
 2. **Setup Signal listener with Signal-CLI (send)**
 * Listen for incoming Mattermost messages and forward them to the Signal group using `signal-cli send` and the provided group ID
 
+## Usage
+
+### Preparation
+
+As per the official documentation for [Signal-CLI](https://github.com/AsamK/signal-cli?tab=readme-ov-file#usage), the number to be used by the client needs to be registered, tl;dr:
+```shell
+# register
+$ signal-cli -a <phonenumber> register
+
+# wait for verification code to be received
+$ signal-cli -a <phonenumber> verify <code>
+```
+
+### Run image
+
+Build and run the image with the necessary arguments:
+```shell
+# build
+$ docker build --build-arg SIGNAL_CLI_VERSION=0.13.16 -t bridge .
+
+# run
+$ docker run -e PHONE_NO=<phonenumber> \
+  -e SIGNAL_GROUP_ID=<group> \
+  -e MATTERMOST_WEBHOOK_URL=<webhook> \
+  bridge
+```
