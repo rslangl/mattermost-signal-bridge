@@ -34,8 +34,8 @@ jobs:
 
       - name: Lint YAML files
         run: |
-          yamllint .
+          yamllint -c .yamllint .
 
       - name: Lint Markdown files
         run: |
-          markdownlint "**/*.md"
+          markdownlint "**/*.md" --config .markdownlint.yaml

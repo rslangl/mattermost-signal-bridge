@@ -30,10 +30,12 @@ Goal: provide a middleware component that connects a privately hosted Mattermost
 2. **Use Signal-CLI as a client**
 
 * Register Signal phone number to use as a client:
+
 ```shell
 ./bin/signal-cli -u +4799887766 register
 ./bin/signal-cli -u +4799887766 verify
 ```
+
 * Invite the above number to the group we are targeting, and save the group ID
 
 ### Setup middleware
