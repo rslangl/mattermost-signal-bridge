@@ -1,6 +1,7 @@
 # Mattermost-Signal bridge
 
-Goal: provide a middleware component that connects a privately hosted Mattermost instance with a Signal group chat, which requires:
+Goal: provide a middleware component that connects a privately hosted 
+Mattermost instance with a Signal group chat, which requires:
 
 * A mattermost bot account with webhook access
 * [Signal-CLI](https://github.com/AsamK/signal-cli), an unofficial CLI tool for interfacing with Signal
@@ -53,7 +54,9 @@ using `signal-cli send` and the provided group ID
 
 ### Preparation
 
+<!-- markdownlint-disable MD013 -->
 As per the official documentation for [Signal-CLI](https://github.com/AsamK/signal-cli?tab=readme-ov-file#usage), the number to be used by the client needs to be registered, tl;dr:
+<!-- markdownlint-enable MD013 -->
 
 ```shell
 # register
