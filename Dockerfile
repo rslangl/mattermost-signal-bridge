@@ -10,7 +10,7 @@ RUN tar xf signal-cli.tar.gz -C /opt/signal-cli --strip-components=1
 FROM alpine:3.22.0
 COPY --from=build /opt /opt
 
-RUN apk add --no-cache bash
+RUN apk add --no-cache bash openjdk21
 
 WORKDIR /app
 COPY bridge.sh .
