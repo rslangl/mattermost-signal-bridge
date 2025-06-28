@@ -39,4 +39,3 @@ jobs:
       - name: Lint Markdown files
         run: |
           markdownlint "**/*.md"
-
