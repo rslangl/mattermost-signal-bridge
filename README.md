@@ -1,6 +1,6 @@
 # Mattermost-Signal bridge
 
-Goal: provide a middleware component that connects a privately hosted 
+Goal: provide a middleware component that connects a privately hosted
 Mattermost instance with a Signal group chat, which requires:
 
 * A mattermost bot account with webhook access
